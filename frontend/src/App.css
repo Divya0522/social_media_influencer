@@ -1,0 +1,344 @@
+.header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 1rem 0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.logo-img {
+  width: 45px;
+  height: 45px;
+  border-radius: 80%;
+  object-fit: cover; 
+}
+
+.nav {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.nav a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.hero {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features {
+  padding: 60px 0;
+  background-color: white;
+}
+
+.feature-card {
+  text-align: center;
+  padding: 30px;
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.influencer-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.influencer-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.influencer-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-value {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.search-filters {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.filter-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  align-items: end;
+}
+
+.dashboard {
+  padding: 40px 0;
+}
+
+.profile-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 40px 0;
+  margin-bottom: 30px;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .nav {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .hero h1 {
+    font-size: 2rem;
+  }
+}
+
+
+/* Company Dashboard Specific Styles */
+.badge {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.btn-sm {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+/* Influencer Card Improvements */
+.influencer-card {
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.influencer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border-color: #007bff;
+}
+
+.stat {
+  text-align: center;
+  padding: 8px;
+}
+
+.stat-value {
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  color: #666;
+  text-transform: uppercase;
+}
+
+/* Collaboration Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-pending { background-color: #ffc107; }
+.status-accepted { background-color: #28a745; }
+.status-rejected { background-color: #dc3545; }
+.status-completed { background-color: #007bff; }
+
+
+/* Improved Profile Layout */
+.profile-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .profile-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dashboard Tabs */
+.dashboard-tabs {
+  display: flex;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 30px;
+}
+
+.tab-button {
+  padding: 12px 24px;
+  border: none;
+  background: transparent;
+  color: #333;
+  cursor: pointer;
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.tab-button.active {
+  background: #007bff;
+  color: white;
+  border-bottom-color: #0056b3;
+}
+
+.tab-button:hover:not(.active) {
+  background: #f8f9fa;
+}
+
+/* Header Improvements */
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-link.active,
+.nav-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.welcome-text {
+  color: #fff;
+  font-size: 0.9rem;
+}
+
+.auth-section {
+  display: flex;
+  gap: 15px;
+}
+
+.logout-btn {
+  padding: 5px 10px;
+  font-size: 0.8rem;
+}
+
+/* Profile Cards */
+.profile-display {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .profile-display {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
+  .logo span {
+    display: none;
+  }
+}
+
+
+/* Collaboration Status Badges */
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.status-pending { background: #ffc107; }
+.status-accepted { background: #28a745; }
+.status-rejected { background: #dc3545; }
+.status-completed { background: #007bff; }
