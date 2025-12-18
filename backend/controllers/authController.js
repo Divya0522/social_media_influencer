@@ -21,8 +21,17 @@ exports.register = async (req, res) => {
 
     if (role === 'influencer') {
       await Influencer.create({ userId, ...profileData });
-    } else if (role === 'company') {
-      await Company.create({ userId, ...profileData });
+    } 
+    else if(role==='company'){
+      await Company.create({
+    userId,
+    companyName: profileData.companyName,
+    industry: profileData.industry,
+    description: profileData.description,
+    contactPerson: profileData.contactPerson,
+    contactEmail: profileData.contactEmail,
+    website: profileData.website
+  });
     }
 
     const token = generateToken(userId);
