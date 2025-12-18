@@ -2,7 +2,6 @@ const express = require('express');
 const cors = require('cors');
 require('dotenv').config();
 
-const setupDatabase = require('./setup/database');
 
 const authRoutes = require('./routes/auth');
 const influencerRoutes = require('./routes/influencers');
