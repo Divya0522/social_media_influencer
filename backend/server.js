@@ -15,8 +15,6 @@ app.use(cors());
 app.use(express.json());
 
 
-setupDatabase();
-
 app.use('/api/auth', authRoutes);
 app.use('/api/influencers', influencerRoutes);
 app.use('/api/companies', companyRoutes);
